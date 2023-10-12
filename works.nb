@@ -1,0 +1,684 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29591,        676]
+NotebookOptionsPosition[     26688,        626]
+NotebookOutlinePosition[     27030,        641]
+CellTagsIndexPosition[     26987,        638]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "l", ",", "allFiles", ",", "i", ",", "p", ",", "h", ",", "m", ",", "mt", 
+   ",", "lt", ",", "ht", ",", "lipa", ",", "lipatest", ",", "mieta", ",", 
+   "mietatest", ",", "czarn", ",", "czarntest", ",", "clas"}], "]"}]], "Input",
+ CellChangeTimes->{{3.854039548478836*^9, 3.854039561144298*^9}, {
+  3.8540397291891947`*^9, 3.8540397294633503`*^9}, {3.855213174401955*^9, 
+  3.8552131759351983`*^9}, {3.8552169100953813`*^9, 3.8552169420653124`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"08465bc0-8314-4205-9929-9707908f70cc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"l", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mt", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lt", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ht", "=", 
+   RowBox[{"{", "}"}]}], ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.8540246803923097`*^9, 3.854024713610259*^9}, {
+   3.8540320738307056`*^9, 3.85403207506339*^9}, 3.854039595542572*^9, {
+   3.8552131889389753`*^9, 3.855213199728594*^9}, {3.855216084638688*^9, 
+   3.8552160877911673`*^9}, {3.855216554372052*^9, 3.855216587129588*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"8ebe13d9-f528-4d1a-bb65-9beb7626c40a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"lipa", "=", 
+    RowBox[{"FileNames", "[", 
+     RowBox[{
+     "\"\<*.jpg\>\"", ",", 
+      "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\Lipa\>\""}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.854039448234296*^9, 3.8540394486651525`*^9}, 
+   3.854039595542572*^9, {3.8552161046832333`*^9, 3.855216177424833*^9}, 
+   3.8552166326858854`*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"0f6d609c-a5bc-4baa-b8db-daf70745876a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", 
+     RowBox[{"Length", "[", "lipa", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", 
+    RowBox[{"AppendTo", "[", 
+     RowBox[{"l", ",", "\[IndentingNewLine]", 
+      RowBox[{"Import", "[", 
+       RowBox[{"lipa", "[", 
+        RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+     "]"}]}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.8540315359072256`*^9, 3.8540315903160615`*^9}, {
+   3.854031626290763*^9, 3.8540316323195868`*^9}, {3.854032095450487*^9, 
+   3.8540321332272835`*^9}, {3.8540321656594496`*^9, 3.854032170639539*^9}, {
+   3.854032210469207*^9, 3.854032224614052*^9}, {3.854032315376722*^9, 
+   3.854032319236457*^9}, {3.85403946271634*^9, 3.8540395081184783`*^9}, {
+   3.854039595542572*^9, 3.8540396536801686`*^9}, {3.855216111073432*^9, 
+   3.8552161125394754`*^9}, 3.8552166326858854`*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"bc6b2751-22cd-4962-9d8d-9354eefa08e6"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lipatest", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{
+    "\"\<*.jpg\>\"", ",", 
+     "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\LipaTest\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", 
+    RowBox[{"Length", "[", "lipatest", "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"lt", ",", "\[IndentingNewLine]", 
+     RowBox[{"Import", "[", 
+      RowBox[{"lipatest", "[", 
+       RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8552166435431414`*^9, 3.8552166552816*^9}, {
+  3.8552170171927876`*^9, 3.855217019235295*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"eaf0b1d3-3c20-499c-b100-d78f45559939"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "lt", "]"}]], "Input",
+ CellChangeTimes->{
+  3.854039671821954*^9, {3.854040488315981*^9, 3.8540404935294576`*^9}, {
+   3.8552161833779593`*^9, 3.855216183689128*^9}, 3.8552169006720076`*^9},
+ CellLabel->"In[41]:=",ExpressionUUID->"6f837679-84dd-463d-8ea9-3a2bf8f6d075"],
+
+Cell[BoxData["115"], "Output",
+ CellChangeTimes->{3.854040493951023*^9, 3.8552167323445663`*^9, 
+  3.8552169011411715`*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"c70db576-698b-413d-9c9b-26d6c72d6a6d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"mieta", "=", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{
+      "\"\<*.jpg\>\"", ",", 
+       "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\Mieta\>\""}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "1"}], ",", 
+     RowBox[{"i", "\[LessEqual]", 
+      RowBox[{"Length", "[", "mieta", "]"}]}], ",", 
+     RowBox[{"i", "++"}], ",", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"m", ",", "\[IndentingNewLine]", 
+       RowBox[{"Import", "[", 
+        RowBox[{"mieta", "[", 
+         RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+      "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.854039724164919*^9, 3.854039770250798*^9}, 
+   3.854040370541151*^9, 3.8540404184045115`*^9, {3.8552161881010695`*^9, 
+   3.8552162168122387`*^9}, 3.8552165297665763`*^9},
+ CellLabel->"In[12]:=",ExpressionUUID->"81f65306-2940-4c86-b324-a3ae449068f2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"mietatest", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{
+    "\"\<*.jpg\>\"", ",", 
+     "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\MietaTest\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", 
+    RowBox[{"Length", "[", "mietatest", "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"mt", ",", "\[IndentingNewLine]", 
+     RowBox[{"Import", "[", 
+      RowBox[{"mietatest", "[", 
+       RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8552165049435387`*^9, 3.855216512077396*^9}, {
+  3.85521654838615*^9, 3.8552165497556944`*^9}, {3.855216992961384*^9, 
+  3.8552169934210515`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"899d7b01-4c84-45e5-be10-6968032421b7"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"czarn", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{
+    "\"\<*.jpg\>\"", ",", 
+     "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\Czarn\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", 
+    RowBox[{"Length", "[", "czarn", "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"h", ",", "\[IndentingNewLine]", 
+     RowBox[{"Import", "[", 
+      RowBox[{"czarn", "[", 
+       RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.855216341641033*^9, 3.8552163610217543`*^9}, 
+   3.8552165372766924`*^9, {3.8552169958627796`*^9, 3.8552169998107247`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"4649a8a0-590f-4980-913f-fe3c9e1b543a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"czarntest", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{
+    "\"\<*.jpg\>\"", ",", 
+     "\"\<E:\\\\ZDJECIA ARCHIWUM\\\\krysztalki\\\\CzarnTest\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", 
+    RowBox[{"Length", "[", "czarntest", "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"ht", ",", "\[IndentingNewLine]", 
+     RowBox[{"Import", "[", 
+      RowBox[{"czarntest", "[", 
+       RowBox[{"[", "i", " ", "]"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8552165817320538`*^9, 3.8552166045378065`*^9}, {
+  3.8552170024416046`*^9, 3.855217002921827*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"c60a9205-c6fc-4149-8634-5bdf0caacc43"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.854039714389089*^9, 
+  3.8540397155098276`*^9}},ExpressionUUID->"f4902da2-d9cb-4a86-b48a-\
+134c55149e9a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Length", "[", "mieta", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "czarn", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "lipa", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "czarntest", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "lipatest", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "mietatest", "]"}]}], "Input",
+ CellChangeTimes->{
+  3.854039789133045*^9, {3.8540404963881702`*^9, 3.8540404992662463`*^9}, {
+   3.8552162229864116`*^9, 3.8552162235179777`*^9}, {3.8552163671781244`*^9, 
+   3.8552163740421815`*^9}, {3.85521706061981*^9, 3.855217079967806*^9}, {
+   3.855217128867164*^9, 3.85521713255697*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"51a79394-3218-40a7-83ea-b9fb30f123b0"],
+
+Cell[BoxData["115"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.8552171330323095`*^9}},
+ CellLabel->"Out[26]=",ExpressionUUID->"adef46b2-7116-4775-8391-d8609f00129a"],
+
+Cell[BoxData["119"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.855217133036254*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"727c79a9-9796-4c6e-9388-40be56a1c10d"],
+
+Cell[BoxData["94"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.855217133040265*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"0d64eb99-5992-472f-bc28-d6b9d8d2555c"],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.85521713304426*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"d00ca208-b89a-474a-ac4c-0ce692dfb8a3"],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.855217133048255*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"5f9b7d65-a0cd-4d09-821d-24911ff21693"],
+
+Cell[BoxData["8"], "Output",
+ CellChangeTimes->{
+  3.854040499689926*^9, {3.855216811767259*^9, 3.855216811942463*^9}, {
+   3.8552171149224424`*^9, 3.855217133052249*^9}},
+ CellLabel->"Out[31]=",ExpressionUUID->"9d37a940-5e6b-43fa-a699-a6dbb2db118e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"clas", " ", "=", " ", 
+   RowBox[{"Classify", "[", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<mieta\>\"", "\[Rule]", "m"}], ",", 
+      RowBox[{"\"\<lipa\>\"", "\[Rule]", "l"}], ",", " ", 
+      RowBox[{"\"\<herbata\>\"", "\[Rule]", "h"}]}], "|>"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8540398042815065`*^9, 3.8540399381001315`*^9}, {
+  3.855216231943266*^9, 3.855216239881541*^9}, {3.8552166696998367`*^9, 
+  3.855216683375578*^9}, {3.8552171632074375`*^9, 3.8552171674963694`*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"340b47c9-7ffe-4c71-955d-459901fe3cb5"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{RowBox[{
+      StyleBox[
+       TagBox["ClassifierFunction", "SummaryHead"], 
+       "NonInterpretableSummary"], 
+      StyleBox["[", "NonInterpretableSummary"], 
+      DynamicModuleBox[{
+       Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+       TemplateBox[{
+         TemplateBox[{
+           PaneSelectorBox[{False -> GridBox[{{
+                 PaneBox[
+                  ButtonBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SquarePlusIconMedium"]], 
+                   ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                  Alignment -> {Center, Center}, ImageSize -> 
+                  Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                 GraphicsBox[{{
+                    PointSize[0.13], 
+                    GrayLevel[0.45], 
+                    
+                    PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                    1.1339776261519132`, 0.8056918676854272}, {
+                    0.5279892326667741, 0.6574306661126254}, {
+                    0.022147046479890797`, 1.4937877187998898`}}], 
+                    GrayLevel[0.7], 
+                    
+                    PointBox[{{-0.9815166384819979, 
+                    0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                    GrayLevel[0.55], 
+                    AbsoluteThickness[1.5], 
+                    LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+                  Axes -> {False, False}, AxesLabel -> {None, None}, 
+                   AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                    AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+                   Frame -> {{True, True}, {True, True}}, 
+                   FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                   Directive[
+                    Thickness[Tiny], 
+                    GrayLevel[0.7]], 
+                   FrameTicks -> {{None, None}, {None, None}}, 
+                   GridLines -> {None, None}, 
+                   LabelStyle -> {FontFamily -> "Arial"}, 
+                   Method -> {"ScalingFunctions" -> None}, 
+                   PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+                   True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+                   Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+                  FrameTicks -> None, FrameStyle -> Directive[
+                    Opacity[0.5], 
+                    Thickness[Tiny], 
+                    RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+                  GrayLevel[0.94]], 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Image\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"herbata\"", "\"lipa\"", "\"mieta\""}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}}, 
+                  GridBoxAlignment -> {
+                   "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                  AutoDelete -> False, 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                  BaseStyle -> {
+                   ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+               GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               BaselinePosition -> {1, 1}], True -> GridBox[{{
+                 PaneBox[
+                  ButtonBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SquareMinusIconMedium"]], 
+                   ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                  Alignment -> {Center, Center}, ImageSize -> 
+                  Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                 GraphicsBox[{{
+                    PointSize[0.13], 
+                    GrayLevel[0.45], 
+                    
+                    PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                    1.1339776261519132`, 0.8056918676854272}, {
+                    0.5279892326667741, 0.6574306661126254}, {
+                    0.022147046479890797`, 1.4937877187998898`}}], 
+                    GrayLevel[0.7], 
+                    
+                    PointBox[{{-0.9815166384819979, 
+                    0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                    GrayLevel[0.55], 
+                    AbsoluteThickness[1.5], 
+                    LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+                  Axes -> {False, False}, AxesLabel -> {None, None}, 
+                   AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                    AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+                   Frame -> {{True, True}, {True, True}}, 
+                   FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                   Directive[
+                    Thickness[Tiny], 
+                    GrayLevel[0.7]], 
+                   FrameTicks -> {{None, None}, {None, None}}, 
+                   GridLines -> {None, None}, 
+                   LabelStyle -> {FontFamily -> "Arial"}, 
+                   Method -> {"ScalingFunctions" -> None}, 
+                   PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+                   True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+                   Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+                  FrameTicks -> None, FrameStyle -> Directive[
+                    Opacity[0.5], 
+                    Thickness[Tiny], 
+                    RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+                  GrayLevel[0.94]], 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Image\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"herbata\"", "\"lipa\"", "\"mieta\""}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Method: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"LogisticRegression\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    "\"Number of training examples: \"", 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["328", "SummaryItem"]}]}}, 
+                  GridBoxAlignment -> {
+                   "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                  AutoDelete -> False, 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                  BaseStyle -> {
+                   ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+               GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               BaselinePosition -> {1, 1}]}, 
+            Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+          "SummaryPanel"], 
+         ButtonBox[
+          DynamicBox[
+           ToBoxes[
+            If[
+             
+             Or[$VersionNumber < 11.2, CurrentValue["RunningEvaluator"] =!= 
+              "Local"], 
+             Style["This object cannot be used as input.", "SummaryEmbed"], 
+             BoxForm`EmbedSummaryLabel[ClassifierFunction, 4738712, 
+              Dynamic[Typeset`embedState$$]]], StandardForm]], ButtonFunction :> 
+          BoxForm`EmbedSummaryInterpretation[
+           ClassifierFunction, 
+            7886978141770757522398493312365900168270734811089821918688, 
+            EvaluationBox[], 
+            Dynamic[Typeset`embedState$$], StandardForm], DefaultBaseStyle -> 
+          "SummaryEmbedButton", BaseStyle -> {"DialogStyle"}, Enabled -> 
+          Dynamic[
+            
+            And[$VersionNumber >= 11.2, CurrentValue["RunningEvaluator"] === 
+             "Local", Typeset`embedState$$ === "Ready"]], Appearance -> 
+          Inherited, Method -> Inherited, Evaluator -> Automatic]}, 
+        "SummaryEmbedGrid"], DynamicModuleValues :> {}], 
+      StyleBox["]", "NonInterpretableSummary"]}]},
+   "CopyTag",
+   DisplayFunction->(#& ),
+   InterpretationFunction->("ClassifierFunction[\[Ellipsis]]"& )],
+  False,
+  BoxID -> 7886978141770757522398493312365900168270734811089821918688,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8540400474667873`*^9, 3.8540404794256144`*^9, 
+  3.8552168356737566`*^9, 3.855217248096813*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"d774bcd7-3498-408d-bf34-c2fc1334351d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"clas", "[", 
+  RowBox[{"mt", ",", "\"\<TopProbabilities\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"clas", "[", 
+  RowBox[{"lt", ",", "\"\<TopProbabilities\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"clas", "[", 
+  RowBox[{"ht", ",", "\"\<TopProbabilities\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.855217255361749*^9, 3.855217306925006*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"6a2c9162-0917-4d4d-8621-77128e9df7db"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.9998413297458101`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.8877724288247181`"}], ",", 
+     RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.11155650758375306`"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.9995368015611187`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.9333849325625796`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.999702101016485`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.9996809990650484`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.6891014254387755`"}], ",", 
+     RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.30002759867847784`"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.993079635225947`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.8552172616289496`*^9, 3.8552173090970316`*^9}},
+ CellLabel->"Out[37]=",ExpressionUUID->"2b67fa01-f6e2-43bc-932e-0b04ed73ca69"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.9976680151517231`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.999859914358058`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.9961060971187496`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.6097224591334847`"}], ",", 
+     RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.3851032282260599`"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.9088963250048903`"}], ",", 
+     RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.09104904208493568`"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.8919899662251962`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"lipa\"\>", "\[Rule]", "0.6501520200899995`"}], ",", 
+     RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.2413904881634291`"}], ",", 
+     RowBox[{"\<\"mieta\"\>", "\[Rule]", "0.10845749174657136`"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.8552172616289496`*^9, 3.855217310119302*^9}},
+ CellLabel->"Out[38]=",ExpressionUUID->"324c03a9-5838-4b08-bf9c-003b7d3922d2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9846206043931549`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9966733776919198`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9977690338658637`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9992541564809834`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9997135527959881`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9999234515300632`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"herbata\"\>", "\[Rule]", "0.9999796720950875`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.8552172616289496`*^9, 3.8552173111395783`*^9}},
+ CellLabel->"Out[39]=",ExpressionUUID->"4b4f077c-0296-4870-9615-99fac8721f1e"]
+}, Open  ]]
+},
+WindowSize->{958, 1108},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 577, 9, 45, "Input",ExpressionUUID->"08465bc0-8314-4205-9929-9707908f70cc"],
+Cell[1138, 31, 960, 24, 124, "Input",ExpressionUUID->"8ebe13d9-f528-4d1a-bb65-9beb7626c40a",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[CellGroupData[{
+Cell[2123, 59, 554, 13, 64, "Input",ExpressionUUID->"0f6d609c-a5bc-4baa-b8db-daf70745876a",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[2680, 74, 1158, 23, 160, "Input",ExpressionUUID->"bc6b2751-22cd-4962-9d8d-9354eefa08e6",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Open  ]],
+Cell[3853, 100, 857, 22, 140, "Input",ExpressionUUID->"eaf0b1d3-3c20-499c-b100-d78f45559939"],
+Cell[CellGroupData[{
+Cell[4735, 126, 308, 5, 45, "Input",ExpressionUUID->"6f837679-84dd-463d-8ea9-3a2bf8f6d075"],
+Cell[5046, 133, 202, 3, 32, "Output",ExpressionUUID->"c70db576-698b-413d-9c9b-26d6c72d6a6d"]
+}, Open  ]],
+Cell[5263, 139, 1005, 25, 159, "Input",ExpressionUUID->"81f65306-2940-4c86-b324-a3ae449068f2"],
+Cell[6271, 166, 913, 23, 140, "Input",ExpressionUUID->"899d7b01-4c84-45e5-be10-6968032421b7"],
+Cell[7187, 191, 873, 22, 140, "Input",ExpressionUUID->"4649a8a0-590f-4980-913f-fe3c9e1b543a"],
+Cell[8063, 215, 865, 22, 140, "Input",ExpressionUUID->"c60a9205-c6fc-4149-8634-5bdf0caacc43"],
+Cell[8931, 239, 154, 3, 28, "Input",ExpressionUUID->"f4902da2-d9cb-4a86-b48a-134c55149e9a"],
+Cell[CellGroupData[{
+Cell[9110, 246, 771, 12, 230, "Input",ExpressionUUID->"51a79394-3218-40a7-83ea-b9fb30f123b0"],
+Cell[9884, 260, 254, 4, 32, "Output",ExpressionUUID->"adef46b2-7116-4775-8391-d8609f00129a"],
+Cell[10141, 266, 252, 4, 32, "Output",ExpressionUUID->"727c79a9-9796-4c6e-9388-40be56a1c10d"],
+Cell[10396, 272, 251, 4, 32, "Output",ExpressionUUID->"0d64eb99-5992-472f-bc28-d6b9d8d2555c"],
+Cell[10650, 278, 249, 4, 32, "Output",ExpressionUUID->"d00ca208-b89a-474a-ac4c-0ce692dfb8a3"],
+Cell[10902, 284, 250, 4, 32, "Output",ExpressionUUID->"5f9b7d65-a0cd-4d09-821d-24911ff21693"],
+Cell[11155, 290, 250, 4, 32, "Output",ExpressionUUID->"9d37a940-5e6b-43fa-a699-a6dbb2db118e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11442, 299, 642, 13, 64, "Input",ExpressionUUID->"340b47c9-7ffe-4c71-955d-459901fe3cb5"],
+Cell[12087, 314, 10833, 214, 90, "Output",ExpressionUUID->"d774bcd7-3498-408d-bf34-c2fc1334351d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22957, 533, 467, 10, 67, "Input",ExpressionUUID->"6a2c9162-0917-4d4d-8621-77128e9df7db"],
+Cell[23427, 545, 1147, 27, 52, "Output",ExpressionUUID->"2b67fa01-f6e2-43bc-932e-0b04ed73ca69"],
+Cell[24577, 574, 1208, 28, 52, "Output",ExpressionUUID->"324c03a9-5838-4b08-bf9c-003b7d3922d2"],
+Cell[25788, 604, 884, 19, 52, "Output",ExpressionUUID->"4b4f077c-0296-4870-9615-99fac8721f1e"]
+}, Open  ]]
+}
+]
+*)
+
